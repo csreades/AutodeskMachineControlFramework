@@ -164,7 +164,6 @@ CModelDataComponentInstance::CModelDataComponentInstance(Lib3MF::CWrapper* p3MFW
 	std::vector<uint8_t> Buffer;
 	pResourcePackage->readEntry(sResourceName, Buffer);
 
-	auto pModel = p3MFWrapper->CreateModel();
 	auto pReader = pModel->QueryReader("3mf");
 
 	pReader->ReadFromBuffer(Buffer);
